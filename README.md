@@ -14,3 +14,5 @@ tmuxinator
 * **yandex-tank**
 * **pgbench** for comparison
 * github actions to run all tests
+
+Odyssey config is located at ./odyssey.conf
