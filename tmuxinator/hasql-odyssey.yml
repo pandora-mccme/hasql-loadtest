@@ -12,7 +12,7 @@ windows:
           for transaction in true false; do
           for release in true false; do
           for list in true false; do
-          time ./wrk2/wrk -d 10 -t 2 -c 2000 --rate 2000 http://localhost:9000/hasql/collection?th=$th&transaction=$transaction&release=$release&list=$list | tee -a ~/results.txt
+          time ./wrk2/wrk -d 60 -t 2 -c 2000 --rate 2000 http://localhost:9000/hasql/collection?th=$th&transaction=$transaction&release=$release&list=$list | tee -a ./logs/wrk2-hasql-odyssey.txt
           done; done; done; done;
   - user:
       panes:

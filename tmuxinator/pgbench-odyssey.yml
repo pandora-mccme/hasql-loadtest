@@ -1,14 +1,14 @@
 name: pgbench-odyssey
-root: ~/loadtest
+root: ~/hasql-loadtest
 pre_window: ulimit -n 1048576
 windows:
   - tester:
       layout: main-vertical
       panes:
-        - pgbench --host=localhost --jobs=2 --client=1000 --time=60 --port=6432
+        - pgbench --host=localhost --jobs=2 --client=2000 --time=60 --rate=2000 --port=6432 --no-vacuum --file=./sql/load.sql
   - user:
       panes:
-        - POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./bin/testing-service -p 9001
+        - POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001
         - while true; do time curl http://localhost:9001/hasql/item?th=false&transaction=true&release=true ; sleep 1; done
   - pooler:
-      - cd odyssey; make console_run
+      - make -C odyssey DEV_CONF=$PWD/odyssey.conf console_run
