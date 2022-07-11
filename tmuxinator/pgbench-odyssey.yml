@@ -5,10 +5,12 @@ windows:
   - tester:
       layout: main-vertical
       panes:
-        - pgbench --host=localhost --jobs=2 --client=2000 --time=60 --rate=2000 --port=6432 --no-vacuum --file=./sql/load.sql
+        - |
+          PGHOST=localhost PGPORT=6432 pgbench -i debian
+          PGHOST=localhost PGPORT=6432 pgbench --jobs=2 --client=2000 --time=60 --rate=2000 --no-vacuum --file=./sql/load.sql --report-latencies debian
   - user:
       panes:
         - POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001
         - while true; do time curl http://localhost:9001/hasql/item?th=false&transaction=true&release=true ; sleep 1; done
   - pooler:
-      - make -C odyssey DEV_CONF=$PWD/odyssey.conf console_run
+      - ./odyssey/build/sources/odyssey ./odyssey.conf
