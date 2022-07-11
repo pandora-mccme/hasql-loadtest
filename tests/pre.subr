@@ -1,0 +1,19 @@
+cd ~/hasql-loadtest
+
+ulimit -n 1048576
+
+kill_pids() {
+    while read pid;
+    do
+    kill $pid
+    done < var/pid
+    cat /dev/null > var/pid
+}
+
+if test -s var/pid
+then
+    echo "var/pid is not empty!"
+    exit 1
+fi
+
+trap 'kill_pids' EXIT

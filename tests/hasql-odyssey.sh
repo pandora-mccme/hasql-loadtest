@@ -1,28 +1,11 @@
 #!/usr/bin/env bash
+
+TEST_NAME="hasql-odyssey"
 # name: hasql-odyssey
-cd ~/hasql-loadtest
-ulimit -n 1048576
 
-kill_pids() {
-    while read pid;
-    do
-    kill $pid
-    done < var/pid
-    cat /dev/null > var/pid
-}
+. "pre.subr"
 
-if test -s var/pid
-then
-    echo "var/pid is not empty!"
-    exit 1
-fi
-
-# Cleanup logs
-rm -f logs/*
-
-trap 'kill_pids' EXIT
-
-echo
+rm -f logs/${TEST_NAME}*
 for th in true false; do
     for transaction in true false; do
         for release in true false; do
