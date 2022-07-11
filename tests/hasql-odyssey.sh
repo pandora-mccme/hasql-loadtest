@@ -18,7 +18,7 @@ then
 fi
 
 # Cleanup logs
-rm logs/*.log
+rm -f logs/*.log
 
 trap 'kill_pids' EXIT
 
@@ -34,8 +34,8 @@ for th in true false; do
                 # Run sidecars
                 ./odyssey/build/sources/odyssey ./odyssey.conf > logs/hasql-odyssey-pooler-$PROFILE_TAG.log 2> logs/hasql-odyssey-pooler-$PROFILE_TAG.err & echo $! >> var/pid
                 sleep 1
-                POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9000 > logs/hasql-odyssey-server-9000-$PROFILE_TAG.log & echo $! >> var/pid
-                POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001 > logs/hasql-odyssey-server-9001-$PROFILE_TAG.log & echo $! >> var/pid
+                POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9000 > logs/hasql-odyssey-server-9000-$PROFILE_TAG.log 2> logs/hasql-odyssey-server-9000-$PROFILE_TAG.err & echo $! >> var/pid
+                POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001 > logs/hasql-odyssey-server-9001-$PROFILE_TAG.log 2> logs/hasql-odyssey-server-9001-$PROFILE_TAG.err& echo $! >> var/pid
                 sleep 2
                 (while true; do curl -s "http://localhost:9001/$PROFILE_URL"; sleep 1; done) > /dev/null & echo $! >> var/pid
                 # Run main tester
