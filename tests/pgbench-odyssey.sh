@@ -5,7 +5,7 @@ TEST_NAME="pgbench-odyssey"
 
 rm -f logs/${TEST_NAME}*
 
-PGHOST=localhost PGPORT=6432 pgbench -i debian
+PGHOST=localhost PGPORT=5432 pgbench -i debian
 for rate in 1000 2000 3000 4000 5000 6000 7000; do
     th="true"; transaction="true"; release="true";
     PROFILE_URL="th=$th&transaction=$transaction&release=$release"
