@@ -1,0 +1,22 @@
+name: hasql-odyssey
+root: ~/hasql-loadtest
+pre_window: ulimit -n 1048576
+windows:
+  - tester:
+      layout: main-vertical
+      panes:
+        - POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9000
+        - |
+          sleep 3
+          for th in true false; do
+          for transaction in true false; do
+          for release in true false; do
+          for list in true false; do
+          time ./wrk2/wrk -d 10 -t 2 -c 2000 --rate 2000 http://localhost:9000/hasql/collection?th=$th&transaction=$transaction&release=$release&list=$list | tee -a ~/results.txt
+          done; done; done; done;
+  - user:
+      panes:
+        - POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001
+        - while true; do time curl http://localhost:9001/hasql/item?th=false&transaction=true&release=true ; sleep 1; done
+  - pooler:
+      - make -C odyssey DEV_CONF=$PWD/odyssey.conf console_run
