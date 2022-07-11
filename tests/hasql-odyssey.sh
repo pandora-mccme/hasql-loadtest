@@ -18,7 +18,7 @@ then
 fi
 
 # Cleanup logs
-rm -f logs/*.log
+rm -f logs/*
 
 trap 'kill_pids' EXIT
 
