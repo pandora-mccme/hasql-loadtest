@@ -3,7 +3,7 @@
 TEST_NAME="hasql-odyssey"
 # name: hasql-odyssey
 
-. "pre.subr"
+. "pre.subr.sh"
 
 rm -f logs/${TEST_NAME}*
 for th in true false; do
