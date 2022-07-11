@@ -3,7 +3,15 @@
 cd ~/hasql-loadtest
 ulimit -n 1048576
 
-trap 'cat var/pid | xargs kill && cat /dev/null > var/pid' EXIT
+kill_pids() {
+    while read pid;
+    do
+    kill $pid
+    done < var/pid
+    cat /dev/null > var/pid
+}
+
+trap 'kill_pids' EXIT
 
 echo
 for th in true false; do
@@ -14,14 +22,14 @@ for th in true false; do
             # Run sidecars
             ./odyssey/build/sources/odyssey ./odyssey.conf > logs/hasql-odyssey-pooler-$PROFILE_TAG.log 2> logs/hasql-odyssey-pooler-$PROFILE_TAG.err & echo $! >> var/pid
             sleep 1
-            POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9000 > logs/hasql-odyssey-server-9000.log 2> logs/hasql-odyssey-server-9000.err & echo $! >> var/pid
-            POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001 > logs/hasql-odyssey-server-9001.log 2> logs/hasql-odyssey-server-9001.err & echo $! >> var/pid
-            sleep 1
-            # Run main tester
+            POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9000 > logs/hasql-odyssey-server-9000.log & echo $! >> var/pid
+            POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001 > logs/hasql-odyssey-server-9001.log & echo $! >> var/pid
+            sleep 2
             (while true; do curl -s "http://localhost:9001/$PROFILE_URL"; done) > /dev/null & echo $! >> var/pid
+            # Run main tester
             echo Running $PROFILE_TAG
-            ./wrk2/wrk -d 60 -t 2 -c 2000 --rate 2000 "http://localhost:9000/hasql/flag?$PROFILE_URL" | tee logs/hasql-odyssey-wrk2-${PROFILE_TAG}.log
-            cat var/pid | xargs kill && cat /dev/null > var/pid || { echo "error terminating services" ; exit ; }
+            echo ./wrk2/wrk -d 60 -t 2 -c 2000 --rate 2000 "http://localhost:9000/hasql/flag?$PROFILE_URL" | tee logs/hasql-odyssey-wrk2-${PROFILE_TAG}.log
+            kill_pids || { echo "error terminating services" ; exit 1 ; }
         done
     done
 done
