@@ -23,7 +23,7 @@ sudo systemctl enable postgresql
 sudo systemctl restart postgresql
 sudo -u postgres psql -c "CREATE USER $USER WITH PASSWORD '$USER'"
 sudo -u postgres createdb -O $USER $USER
-psql < initdb.sql
+psql < sql/initdb.sql
 # test: psql -c "select * from objects"
 
 # PgBouncer
@@ -51,4 +51,3 @@ sudo apt-get install -y \
 	ca-certificates \
 	zlib1g-dev \
         ministat
-make build
