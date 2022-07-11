@@ -1,4 +1,5 @@
-cd ~/hasql-loadtest
+#!/usr/bin/env bash
+cd ~/hasql-loadtest || exit
 
 ulimit -n 1048576
 
@@ -17,9 +18,9 @@ write_pid() {
 }
 
 kill_pids() {
-    while read pid;
+    while read -r pid;
     do
-    kill $pid
+    kill "$pid"
     done < var/pid
     cat /dev/null > var/pid
 }
@@ -38,7 +39,7 @@ wait_mtime() {
     MTIME_PREV=""
     while true;
     do
-        MTIME=$(stat $1|grep Modify)
+        MTIME=$(stat "$1"|grep Modify)
         if [ "$MTIME" = "$MTIME_PREV" ]
         then
             break
