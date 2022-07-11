@@ -25,15 +25,7 @@ for th in true false; do
                 echo Running $PROFILE_TAG
                 ./wrk2/wrk -d 60 -t 2 -c 2000 --rate 2000 "http://localhost:9000/hasql/flag?$PROFILE_URL" | tee logs/hasql-odyssey-wrk2-${PROFILE_TAG}.log
                 
-                MTIME=""
-                MTIME_PREV=""
-                while true;
-                do
-                    MTIME=$(stat logs/hasql-odyssey-server-9000-$PROFILE_TAG.log|grep Modify)
-                    [ "$MTIME" = "$MTIME_PREV" ] && break
-                    MTIME_PREV=$MTIME
-                    sleep 10
-                done
+                wait_mtime logs/$TEST_NAME-server-9000-$PROFILE_TAG.log
 
                 kill_pids || { echo "error terminating services" ; exit 1 ; }
 
