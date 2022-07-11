@@ -41,6 +41,7 @@ for th in true false; do
                 # Run main tester
                 echo Running $PROFILE_TAG
                 ./wrk2/wrk -d 60 -t 2 -c 2000 --rate 2000 "http://localhost:9000/hasql/flag?$PROFILE_URL" | tee logs/hasql-odyssey-wrk2-${PROFILE_TAG}.log
+                
                 MTIME=""
                 MTIME_PREV=""
                 while true;
