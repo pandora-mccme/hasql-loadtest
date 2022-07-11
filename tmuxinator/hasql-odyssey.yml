@@ -8,10 +8,12 @@ windows:
         - POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9000
         - |
           sleep 3
+          echo "\nStart testing $(date)" | tee -a ./logs/wrk2-hasql-odyssey.txt
+          time ./wrk2/wrk -d 60 -t 2 -c 2000 --rate 2000 http://localhost:9000/plain | tee -a ./logs/wrk2-hasql-odyssey.txt
+          echo "\nStart testing $(date)" >> ./logs/wrk2-hasql-odyssey.txt
           for th in true false; do
           for transaction in true false; do
           for release in true false; do
-          for list in true false; do
           time ./wrk2/wrk -d 60 -t 2 -c 2000 --rate 2000 http://localhost:9000/hasql/flag?th=$th&transaction=$transaction&release=$release | tee -a ./logs/wrk2-hasql-odyssey.txt
           done; done; done; done;
   - user:
@@ -19,4 +21,4 @@ windows:
         - POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001
         - while true; do time curl http://localhost:9001/hasql/item?th=false&transaction=true&release=true | tee -a ./logs/user-hasql-odyssey.txt ; sleep 1; done
   - pooler:
-      - make -C odyssey DEV_CONF=$PWD/odyssey.conf console_run
+      - ./odyssey/build/sources/odyssey ./odyssey.conf
