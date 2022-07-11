@@ -2,6 +2,16 @@ cd ~/hasql-loadtest
 
 ulimit -n 1048576
 
+# $1 - sleep interval
+# $2 - URL
+curl_tester() {
+    while true
+    do
+        curl -s "$2"
+        sleep "$1"
+    done
+}
+
 write_pid() {
     echo $! >> var/pid
 }
