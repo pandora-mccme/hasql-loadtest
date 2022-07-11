@@ -2,6 +2,10 @@ cd ~/hasql-loadtest
 
 ulimit -n 1048576
 
+write_pid() {
+    echo $! >> var/pid
+}
+
 kill_pids() {
     while read pid;
     do
