@@ -25,7 +25,7 @@ for th in true false; do
             POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9000 > logs/hasql-odyssey-server-9000.log & echo $! >> var/pid
             POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001 > logs/hasql-odyssey-server-9001.log & echo $! >> var/pid
             sleep 2
-            (while true; do curl -s "http://localhost:9001/$PROFILE_URL"; done) > /dev/null & echo $! >> var/pid
+            (while true; do curl -s "http://localhost:9001/$PROFILE_URL"; sleep 1; done) > /dev/null & echo $! >> var/pid
             # Run main tester
             echo Running $PROFILE_TAG
             echo ./wrk2/wrk -d 60 -t 2 -c 2000 --rate 2000 "http://localhost:9000/hasql/flag?$PROFILE_URL" | tee logs/hasql-odyssey-wrk2-${PROFILE_TAG}.log
