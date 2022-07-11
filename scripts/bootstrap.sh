@@ -49,5 +49,6 @@ sudo apt-get install -y \
 	build-essential \
 	locales \
 	ca-certificates \
-	zlib1g-dev
+	zlib1g-dev \
+        ministat
 make build
