@@ -2,3 +2,4 @@
 /logs
 *.swp
 *.tar
+var/pid
