@@ -54,6 +54,8 @@ for th in true false; do
 
                 kill_pids || { echo "error terminating services" ; exit 1 ; }
 
+                sleep 10
+
             done
         done
     done
