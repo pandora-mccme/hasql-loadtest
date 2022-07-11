@@ -7,10 +7,10 @@ windows:
       panes:
         - |
           PGHOST=localhost PGPORT=6432 pgbench -i debian
-          PGHOST=localhost PGPORT=6432 pgbench --jobs=2 --client=2000 --time=60 --rate=2000 --no-vacuum --file=./sql/load.sql --report-latencies debian
+          PGHOST=localhost PGPORT=6432 pgbench --jobs=2 --client=2000 --time=60 --rate=2000 --no-vacuum --file=./sql/load.sql --report-latencies debian | tee logs/pgbench-odyssey-pgbench.log
   - user:
       panes:
-        - POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001
+        - POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" ./hasql-loadtest-template/bin/testing-service -p 9001 | tee logs/pgbench-odyssey-user.log
         - while true; do time curl http://localhost:9001/hasql/item?th=false&transaction=true&release=true ; sleep 1; done
   - pooler:
       - ./odyssey/build/sources/odyssey ./odyssey.conf
