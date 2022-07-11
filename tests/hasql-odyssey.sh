@@ -3,7 +3,7 @@
 cd ~/hasql-loadtest
 ulimit -n 1048576
 
-trap 'cat var/pid | xargs kill && rm var/pid' EXIT
+trap 'cat var/pid | xargs kill && cat /dev/null > var/pid' EXIT
 
 echo
 for th in true false; do
@@ -21,7 +21,7 @@ for th in true false; do
             (while true; do curl -s "http://localhost:9001/$PROFILE_URL"; done) > /dev/null & echo $! >> var/pid
             echo Running $PROFILE_TAG
             ./wrk2/wrk -d 60 -t 2 -c 2000 --rate 2000 "http://localhost:9000/hasql/flag?$PROFILE_URL" | tee logs/hasql-odyssey-wrk2-${PROFILE_TAG}.log
-            cat var/pid | xargs kill && rm var/pid || { echo "error terminating services" ; exit ; }
+            cat var/pid | xargs kill && cat /dev/null > var/pid || { echo "error terminating services" ; exit ; }
         done
     done
 done
