@@ -1,13 +1,13 @@
-## Report on research on hasql performance with Odyssey pooler
+## Report on hasql performance with Odyssey pooler
 
-### Statement of purpose
+### Purpose
 
-We at MCCME run bunch of hasql-based applications. Related part of the stack is the following: Yandex Cloud with managed PostgreSQL instance and Odyssey set in transactional mode, workers on Debian 11, hasql, hasql-th, hasql-transaction, servant.
+At MCCME we develop hasql-based applications. Related part of the stack is the following: managed PostgreSQL instance at Yandex Cloud and [Odyssey](https://github.com/yandex/odyssey) set in transactional mode, Debian 11 as base image, hasql, hasql-th, hasql-transaction, servant.
 
-During testing of behaviour of one of services under load we observed external monitoring alerts on another service depending on the same database cluster.
-We started to investigate (with testing-service from this repo as pressed service and pgbench) and formulated loose hypothesis that hasql does hold connections longer than necessary or something like that.
+While testing one of the services under load we observed external monitoring alerts for another service connected to the same database cluster.
+We started to investigate (with testing-service from this repo as pressed service and pgbench) and formulated loose hypothesis that *hasql* holds connections longer than necessary or something like that.
 
-In this repo we try to introduce reproducible research of the case.
+Here we try to introduce reproducible research of the case.
 
 ### Methodology and how to reproduce
 
