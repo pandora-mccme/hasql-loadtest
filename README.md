@@ -16,8 +16,8 @@ All experiments are conducted on special virtual machine. To connect use `ssh de
 Tooling: `PostgreSQL` cluster, `Odyssey`, our own [testing service](https://github.com/pandora-mccme/hasql-loadtest-template), `pgbench` and [`wrk2`](https://github.com/giltene/wrk2).
 Configuration can be browsed upon this repository. As it worths explicit mention, `max_connections = 100`.
 
-PostgreSQL cluster is listening on port 5432 with Odyssey listening on port 6432. Two instances of testing service (called `beaver` and `user`) are run listening on ports 9000 and 9001 and connect database on port 6432.
-`wrk` is used to generate load on beaver with specified target rps rate for rates in range `[50, 100, 200, 500, 1000, 2000, 3000, 4000, 5000]`. `pgbench` does the same with database alone.
+PostgreSQL cluster is listening on port 5432, and Odyssey is listening on port 6432. Two instances of testing service (called `beaver` and `user`) are run on ports 9000 and 9001, connecting to database on port 6432.
+`wrk` is used to generate load on beaver with specified target rps rate for rates in range `[50, 100, 200, 500, 1000, 2000, 3000, 4000, 5000]`. `pgbench` does the same directly through pooler.
 
 Test suite is split into three parts.
 `hasql-odyssey-plain` and `pgbench-odyssey` serve as baselines to test results of `hasql-odyssey`, the former excludes all database related tools from stack and the latter excludes all Haskell-related tools.
@@ -38,14 +38,14 @@ cd hasql-loadtest/tests
 ./pgbench-odyssey.sh
 ```
 
-We have tmux installed to maintain shared terminal sessions.
+Tmux helps to maintain steady terminal sessions.
 
-We were also planning to perform same tests with `pgbouncer` and on a raw database. But it was postponed due to lack of time. `pgbouncer` is not properly configured yet.
+We were also planning to perform same tests with `pgbouncer` and on a raw database. But this is left to the second stage. `pgbouncer` is not properly configured yet.
 
-Statistics are collected with `scripts/compute_run.sh`. It is mounted as `~/bin/stats`. `stats`, `odyssey`, `testing-service` and `wrk` are all available in `PATH`.
+Statistics are collected with `scripts/compute_run.sh`. It is mounted as `~/bin/stats`. `stats`, `odyssey`, `testing-service` and `wrk` are all available in `$PATH`.
 
 Any sane action of virtual machine is allowed. Please be careful.
-Database is accessible via `psql debian`.
+Local database is accessible via `psql debian`.
 
 ### Results
 
@@ -54,6 +54,8 @@ Reader can extract all required data from logs at `~/logs` and monitor machine c
 We have specifically processed logs of `user` service for all rps rates into `.stat` files. We did not measure runs with `th=false` and `transaction=false`. You can explore logs via `stats` to ensure these flags does not affect performance.
 
 Here are the collected statistics:
+
+`cd results/table`
 
 - `tail 50/*.stat`:
 
@@ -502,7 +504,7 @@ x 104   0.002663608     8.5998908   0.006403996    0.56586138     1.3344346
 
 ### Interpretation
 
-From collected statistics we observe that with `hasql` random slowdowns in processing requests happen even on relatively low loads. You're free to take a look at state of `pg_stat_activity`and related tables during the test.
+From collected statistics we observe that with `hasql` random slowdowns in processing requests happen even on relatively low loads. You're free to take a look at state of `pg_stat_activity` and related tables during the test.
 
 Also results on high RPS in comparison with `pgbench` seem to be evidence of `hasql` being unable to provide desired rps rate.
 
