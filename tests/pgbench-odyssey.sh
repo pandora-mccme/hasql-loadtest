@@ -3,7 +3,7 @@ TEST_NAME="pgbench-odyssey"
 
 . "pre.subr.sh" || exit
 
-# rm -f logs/${TEST_NAME}*
+rm -f logs/${TEST_NAME}*
 PGHOST=localhost PGPORT=5432 pgbench -i debian
 for rate in 100 200 500 1000 2000 3000 4000 5000 6000 7000; do
     th="true"; transaction="true"; release="true";
