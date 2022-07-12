@@ -13,7 +13,7 @@ Here we try to introduce reproducible research of the case.
 
 All experiments are conducted on special virtual machine. To connect use `ssh debian@pgtest.mathem.space`. We have collected all public keys available from [collaborators](https://github.com/nikita-volkov/hasql/graphs/contributors) of hasql, if your key is missed, contact us via v.guzeev@mathem.ru or e.kuzmichev@mathem.ru.
 
-Tooling: `PostgreSQL` cluster, `Odyssey`, our own [testing service](https://github.com/pandora-mccme/hasql-loadtest-template), `pgbench` and `[wrk2](https://github.com/giltene/wrk2)`.
+Tooling: `PostgreSQL` cluster, `Odyssey`, our own [testing service](https://github.com/pandora-mccme/hasql-loadtest-template), `pgbench` and [`wrk2`](https://github.com/giltene/wrk2).
 Configuration can be browsed upon this repository. As it worths explicit mention, `max_connections = 100`.
 
 PostgreSQL cluster is listening on port 5432 with Odyssey listening on port 6432. Two instances of testing service (called `beaver` and `user`) are run listening on ports 9000 and 9001 and connect database on port 6432.
