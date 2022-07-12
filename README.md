@@ -20,7 +20,7 @@ PostgreSQL cluster is listening on port 5432 with Odyssey listening on port 6432
 `wrk` is used to generate load on beaver with specified target rps rate for rates in range `[50, 100, 200, 500, 1000, 2000, 3000, 4000, 5000]`. `pgbench` does the same with database alone.
 
 Test suite is split into three parts.
-`hasql-odyssey-plain` and `pgbench-odysses` serve as baselines to test results of `hasql-odyssey`, the former exclude all database related tools from stack and the latter excludes all Haskell-related tools.
+`hasql-odyssey-plain` and `pgbench-odyssey` serve as baselines to test results of `hasql-odyssey`, the former excludes all database related tools from stack and the latter excludes all Haskell-related tools.
 
 In `hasql-odyssey-plain` `wrk` beats handler which does not query database. This baseline is needed to exclude general misconfiguration of system, e.g. low value of `ulimit -n`.
 `hasql-odyssey` beats database via `beaver` with `SELECT 't'::bool` with various settings. Id est it can use `hasql-th` with explicitly non-prepared statements or not, use `hasql-transaction` with explicitly set read-only transactions with `ReadCommitted` isolation level or not, and it can explicitly release connections of leave it to pooler.
@@ -506,4 +506,4 @@ From collected statistics we observe that with `hasql` random slowdowns in proce
 
 Also results on high RPS in comparison with `pgbench` seem to be evidence of `hasql` being unable to provide desired rps rate.
 
-We are not ready to claim any interpretation from collected data (in particular if there is a solvable problem in hasql library) but initial observations are indeed reproduced. And we believe these results to be evidence in support if hypothesis.
+We are not ready to claim any interpretation from collected data (in particular if there is a solvable problem in hasql library) but initial observations are indeed reproduced. And we believe these results to be evidence in support of hypothesis.
