@@ -504,8 +504,8 @@ x 104   0.002663608     8.5998908   0.006403996    0.56586138     1.3344346
 
 ### Interpretation
 
-From collected statistics we observe that with `hasql` random slowdowns in processing requests happen even on relatively low loads. You're free to take a look at state of `pg_stat_activity` and related tables during the test.
+From collected statistics we observe that random slowdowns in processing requests happen even on relatively low loads with `hasql`. You're free to take a look at state of `pg_stat_activity` and related tables during the test.
 
-Also results on high RPS in comparison with `pgbench` seem to be evidence of `hasql` being unable to provide desired rps rate.
+Also results on high RPS in comparison with `pgbench` seem to be evidence of `hasql` being unable to provide desired RPS rate.
 
 We are not ready to claim any interpretation from collected data (in particular if there is a solvable problem in hasql library) but initial observations are indeed reproduced. And we believe these results to be evidence in support of hypothesis.
