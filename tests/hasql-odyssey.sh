@@ -5,11 +5,11 @@ TEST_NAME="hasql-odyssey"
 
 . "pre.subr.sh"
 
-# rm -f logs/${TEST_NAME}*
+rm -f logs/${TEST_NAME}*
 for th in true false; do
     for transaction in true false; do
         for release in true false; do
-            for rate in 1000 2000 3000 4000 5000; do
+            for rate in 100 200 500 1000 2000 3000 4000 5000; do
                 PROFILE_URL="th=$th&transaction=$transaction&release=$release"
                 PROFILE_TAG=$(echo $PROFILE_URL-rate-$rate | tr "&=" "-")
                 echo
