@@ -1,0 +1,496 @@
+x <stdin>
++--------------------------------------------------------------------------+
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|      x                                                                   |
+|   x  x                                                                   |
+|   x  x                                                                   |
+|   x  x                                                                   |
+|   x  x                                                                   |
+|   x  x                                                                   |
+|   x  x                                                                   |
+|   x  xx                                                                  |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   x  xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xx xxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|   xxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxx                                                                 |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxx                                                                |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxx                                                               |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+|  xxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxx                                                              |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxx                                                             |
+| xxxxxxxxxxxxx                                                            |
+| xxxxxxxxxxxxx                                                            |
+| xxxxxxxxxxxxx                                                            |
+| xxxxxxxxxxxxx                                                            |
+| xxxxxxxxxxxxx                                                            |
+| xxxxxxxxxxxxx                                                            |
+| xxxxxxxxxxxxxx                                                           |
+| xxxxxxxxxxxxxx                                                           |
+| xxxxxxxxxxxxxx                                                           |
+| xxxxxxxxxxxxxx                                                           |
+| xxxxxxxxxxxxxx                                                           |
+| xxxxxxxxxxxxxx                                                           |
+| xxxxxxxxxxxxxx                                                           |
+| xxxxxxxxxxxxxx  x                                                        |
+| xxxxxxxxxxxxxx  x                                                        |
+| xxxxxxxxxxxxxxx x                                                        |
+| xxxxxxxxxxxxxxx x                                                        |
+| xxxxxxxxxxxxxxx x                                                        |
+| xxxxxxxxxxxxxxx x                                                        |
+| xxxxxxxxxxxxxxxxx                                                        |
+| xxxxxxxxxxxxxxxxx                                                        |
+| xxxxxxxxxxxxxxxxx                                                        |
+| xxxxxxxxxxxxxxxxx                                                        |
+| xxxxxxxxxxxxxxxxx                                                        |
+| xxxxxxxxxxxxxxxxxx                                                       |
+| xxxxxxxxxxxxxxxxxx                                                       |
+| xxxxxxxxxxxxxxxxxx                                                       |
+| xxxxxxxxxxxxxxxxxx                                                       |
+|xxxxxxxxxxxxxxxxxxx                                                       |
+|xxxxxxxxxxxxxxxxxxxxx  x                                                  |
+|xxxxxxxxxxxxxxxxxxxxx  x                                                  |
+|xxxxxxxxxxxxxxxxxxxxx  x                                                  |
+|xxxxxxxxxxxxxxxxxxxxx  x                                                  |
+|xxxxxxxxxxxxxxxxxxxxxx x                                                  |
+|xxxxxxxxxxxxxxxxxxxxxx x x                                                |
+|xxxxxxxxxxxxxxxxxxxxxxxx x                                                |
+|xxxxxxxxxxxxxxxxxxxxxxxx x                                                |
+|xxxxxxxxxxxxxxxxxxxxxxxxxx                                                |
+|xxxxxxxxxxxxxxxxxxxxxxxxxx xx                                             |
+|xxxxxxxxxxxxxxxxxxxxxxxxxxxxx x                                           |
+|xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                           |
+|xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                           |
+|xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx          x x                             |
+|xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x  xxx   x xxx xx   x                    |
+|xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x  xxxxxxxxxxxxxxx  x                   x|
+|  |___MA_____|                                                            |
++--------------------------------------------------------------------------+
+    N           Min           Max        Median           Avg        Stddev
+x 3969   0.001959964   0.009222771   0.002575799    0.00266628 0.00055498699
