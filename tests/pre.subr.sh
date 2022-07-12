@@ -8,8 +8,7 @@ ulimit -n 1048576
 curl_tester() {
     while true
     do
-        curl -s "$2"
-        sleep "$1"
+        curl -s "$1"
     done
 }
 
