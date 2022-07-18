@@ -14,8 +14,8 @@ for rate in 100 200 500 1000 2000 3000 4000 5000; do
     # Run sidecars
     odyssey ./odyssey.conf > logs/$TEST_NAME-pooler-"$PROFILE_TAG".log 2> logs/$TEST_NAME-pooler-"$PROFILE_TAG".err & write_pid
     sleep 1
-    POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER connection_timeout=5" testing-service -p 9000 > logs/$TEST_NAME-server-9000-"$PROFILE_TAG".log 2> logs/$TEST_NAME-server-9000-"$PROFILE_TAG".err & write_pid
-    POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER connection_timeout=5" testing-service -p 9001 > logs/$TEST_NAME-server-9001-"$PROFILE_TAG".log 2> logs/$TEST_NAME-server-9001-"$PROFILE_TAG".err & write_pid
+    POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" testing-service -p 9000 > logs/$TEST_NAME-server-9000-"$PROFILE_TAG".log 2> logs/$TEST_NAME-server-9000-"$PROFILE_TAG".err & write_pid
+    POSTGRES="host=localhost port=6432 user=$USER password=$PGPASSWORD dbname=$USER" testing-service -p 9001 > logs/$TEST_NAME-server-9001-"$PROFILE_TAG".log 2> logs/$TEST_NAME-server-9001-"$PROFILE_TAG".err & write_pid
     sleep 2
     curl_tester "http://localhost:9001/hasql/item?$PROFILE_URL" > /dev/null & write_pid
     # Run main tester
